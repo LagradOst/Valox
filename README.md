@@ -12,11 +12,15 @@ https://gist.github.com/kn9ts/cbe95340d29fc1aaeaa5dd5c059d2e60
 ### Features
 + Tracers
 + Bezier Bones
-+ 2D Box Esp
-+ Hp Esp
-+ Dropped Item Esp
++ 2D Box
++ Player hp
++ Dropped item names
 + Bomb timer
-+ Ice Wall Hp
++ Sage wall hp
+
+<p align="center">
+<img src="esp.png" height="400"/>
+</p>
 
 ### How to run
 1. Install rust https://www.rust-lang.org/tools/install
