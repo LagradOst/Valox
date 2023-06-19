@@ -1,0 +1,19 @@
+[package]
+name = "memory_macros"
+version = "0.1.0"
+edition = "2021"
+authors = ["bluefire1337"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+proc-macro2 ="1.0.49"
+regex = "1.7.1"
+lazy_static = "*"
+
+xxhash-rust = { version = "0.8.6", features = ["xxh3"] }

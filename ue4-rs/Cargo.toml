@@ -1,0 +1,23 @@
+[package]
+name = "ue4-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["bluefire1337"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+memory = {path = "../memory" }
+vek = "0.15.10"
+
+egui_overlay = { path= "../egui/egui_overlay", optional = true  }
+memoize = "0.4.0"
+xxhash-rust = { version = "0.8.6", features = ["xxh3"] }
+
+[features]
+default = ["egui"]
+egui = ["dep:egui_overlay"]
+
+
+[build-dependencies]
+cc = "1.0"

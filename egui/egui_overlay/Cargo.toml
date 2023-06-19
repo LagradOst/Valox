@@ -1,0 +1,26 @@
+[package]
+name = "egui_overlay"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+egui = {version= "0.21.0", features = ["serde", "bytemuck"] }
+egui_extras = { version = "0.21.0", features = ["image"] }
+bytemuck = "1.13"
+wgpu = "0.15.1"
+
+# custom forks are used to correct the overlay flags
+winit = { path = "../winit", features = ["x11"]}
+egui_winit_platform = { path = "../egui_winit_platform" }
+
+#winit ={ version = "0.28.2", features = ["x11"]}
+#egui_winit_platform ={ version = "0.18.0"}
+
+pollster = "0.3.0"
+winapi = { version = "*", features = ["winuser", "dwmapi"]}
+
+[features]
+default = ["log"]
+log = []

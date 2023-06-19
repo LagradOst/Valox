@@ -1,0 +1,12 @@
+[package]
+name = "valox"
+version = "0.1.0"
+edition = "2021"
+authors = ["bluefire1337"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ue4-rs = { path = "../ue4-rs" }
+lazy_static = "*"
+winapi = { version = "0.3.9", features = ["winuser"] }

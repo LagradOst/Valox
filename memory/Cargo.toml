@@ -1,0 +1,26 @@
+[package]
+name = "memory"
+version = "0.1.0"
+edition = "2021"
+authors = ["bluefire1337"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+memory_macros = {path = "../memory_macros"} 
+
+winapi = { version = "0.3.9", features = [
+    "handleapi",
+    "libloaderapi",
+    "tlhelp32",
+    "psapi",
+    "winver",
+    "fileapi",
+    "winbase",
+    #driver
+    "minwindef",
+    "ioapiset",
+    "winioctl",
+    # no_driver
+    "memoryapi", 
+] }

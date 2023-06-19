@@ -1,0 +1,21 @@
+[package]
+name = "egui_winit_platform"
+version = "0.18.0"
+authors = ["Nils Hasenbanck <nils@hasenbanck.de>"]
+edition = "2018"
+description = "Platform code to use egui with winit."
+homepage = "https://github.com/hasenbanck/egui_winit_platform"
+repository = "https://github.com/hasenbanck/egui_winit_platform"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+
+[dependencies]
+egui = { version = "0.21", default-features = false }
+winit = { path = "../winit" }
+copypasta = { version = "0.8", optional = true }
+webbrowser = { version = "0.8", optional = true }
+
+[features]
+default = ["default_fonts"]
+clipboard = ["copypasta"]
+default_fonts = ["egui/default_fonts"]
