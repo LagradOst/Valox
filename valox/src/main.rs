@@ -9,9 +9,7 @@ mod classes;
 pub fn initalize() -> ReadResult<()> {
     init_memory("VALORANT-Win64-Shipping.exe")?;
     unsafe {
-        let a = process_base() + 0x90e0600;
-
-        FNAME_POOL_PTR = a;
+        FNAME_POOL_PTR = process_base() + 0x90e0600;
         VALORANT_KEY = read(guard())?;
     }
     assert_eq!(
