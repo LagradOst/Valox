@@ -75,7 +75,12 @@ impl HackData {
         if self.tracers_enabled {
             camera.draw_tracers(c2w.translation, self.tracers_color);
         }
-
+        
+        // simple culling
+        if camera.forwards.dot((camera.world_location - c2w.translation).normalized()) > 0. {
+            return Ok(());
+        }
+        
         let color = if mesh.b_recently_rendered()? {
             self.visible_color
         } else {
