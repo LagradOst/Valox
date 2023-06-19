@@ -17,7 +17,7 @@ https://gist.github.com/kn9ts/cbe95340d29fc1aaeaa5dd5c059d2e60
 + Dropped item names
 + Bomb timer
 + Sage wall hp
-
++ Egui menu (Right Alt)
 <p align="center">
 <img src="esp.png" height="400"/>
 </p>
